@@ -1,2 +1,1 @@
-# spotify
-spotify clone (study projects)
+# Spotify

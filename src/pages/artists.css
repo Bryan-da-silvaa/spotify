@@ -1,0 +1,225 @@
+/* -------------------------------------------------------- */
+/* Artists */
+/* -------------------------------------------------------- */
+#root > .artists {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+#root > .artists > .list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 250px;
+    grid-gap: 20px;
+    width: calc(100% - 20px);
+    height: calc(100% - 70px);
+    margin: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+#root > .artists > .list > a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    border: 5px solid #00000020;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+#root > .artists > .list > a:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.06);
+}
+#root > .artists > .list > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#root > .artists > .list > a > h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    background-color: var(--background-transparent);
+}
+/* -------------------------------------------------------- */
+/* Artist */
+/* -------------------------------------------------------- */
+#artistName {
+    color: var(--primary-color);
+}
+#root > .artist {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+#root > .artist > .artistInfos {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+#root > .artist > .artistInfos > .artistPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+#root > .artist > .artistInfos > .artistPhoto > img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    object-fit: cover;
+    border: 5px solid #00000020;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+#root > .artist > .artistInfos > .artistDescription,
+#root > .artist > .artistInfos > .artistBiography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#root > .artist > .artistInfos > .artistBiography {
+    max-height: 300px;
+    border-bottom: 1px solid #00000020;
+}
+#root > .artist > .artistInfos > .artistDescription > h5,
+#root > .artist > .artistInfos > .artistBiography > h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    height: 30px;
+    color: var(--text-color);
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+#root > .artist > .artistInfos > .artistDescription > p,
+#root > .artist > .artistInfos > .artistBiography > p {
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+#root > .artist > .artistInfos > .artistBiography > p {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#root > .artist > .artistDetails {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 200px);
+    border-left: 1px solid #00000020;
+}
+#root > .artist > .artistDetails > h2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #00000020;
+    box-shadow: var(--box-shadow);
+}
+#root > .artist > .artistDetails > h2 > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    color: var(--primary-color);
+}
+/* -------------------------------------------------------- */
+/* Albums */
+/* -------------------------------------------------------- */
+#root > .artist > .artistDetails > .artistAlbums {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 250px;
+    grid-gap: 20px;
+    width: 100%;
+    height: calc(100% - 50px);
+    padding: 20px;
+    overflow-y: auto;
+}
+#root > .artist > .artistDetails > .artistAlbums  > a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    border: 5px solid #00000020;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+#root > .artist > .artistDetails > .artistAlbums  > a:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.06);
+}
+#root > .artist > .artistDetails > .artistAlbums  > a > img {
+    width: 100%;
+    height: 100%;
+}
+#root > .artist > .artistDetails > .artistAlbums  > a > .year {
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--text-color);
+    border-radius: 5px;
+    background-color: var(--background-transparent);
+}
+#root > .artist > .artistDetails > .artistAlbums  > a > .popularity {
+    padding: 5px 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: var(--text-color);
+    border-radius: 5px;
+    background-color: var(--background-transparent);
+}
+#root > .artist > .artistDetails > .artistAlbums  > a > .popularity > span {
+    color: var(--primary-color);
+}
+/* -------------------------------------------------------- */
+/* Pagination */
+/* -------------------------------------------------------- */
+#root > .artists > .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: auto 0px 0px 0px;
+    border-top: 1px solid #00000020;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    z-index: 600;
+}
+#root > .artists > .pagination > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--box-shadow);
+    transition: all 0.5s ease-in-out;
+}
+#root > .artists > .pagination > a:hover {
+    background-color: var(--primary-color);
+}

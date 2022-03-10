@@ -1,0 +1,66 @@
+/* -------------------------------------------------------- */
+/* Fonts */
+/* -------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+/* -------------------------------------------------------- */
+/* Root */
+/* -------------------------------------------------------- */
+:root {
+    --primary-color: #009FFC;
+    --text-color: #FFFFFF;
+    --text-color-hover: #2B2B2B;
+    --box-shadow: 2px 2px 5px #00000020;
+    --background-color: #2B2B2B;
+    --background-color-hover: #FFFFFF;
+    --background-transparent: #00000080;
+}
+/* -------------------------------------------------------- */
+/* Scrollbar */
+/* -------------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+}
+/* -------------------------------------------------------- */
+/* Defaults */
+/* -------------------------------------------------------- */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-family: 'Ubuntu';
+    border: none;
+    background: none;
+    user-select: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background-color: var(--background-color);
+}
+h1 {
+    font-size: 19px;
+}
+h2 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 17px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 15px;
+}
+a, p, li, input, button, h6 {
+    font-size: 14px;
+}
+button {
+    cursor: pointer;
+}
